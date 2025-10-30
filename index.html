@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot Assistant - Bilingual Voice Enabled</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1 class="app-title">🤖 AI Assistant</h1>
+            </div>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en" id="btnEnglish">EN</button>
+                    <button class="lang-btn" data-lang="hi" id="btnHindi">हिं</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Avatar Section -->
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <div class="avatar" id="avatar">
+                        <div class="avatar-head">
+                            <div class="avatar-face">
+                                <div class="eyes">
+                                    <div class="eye eye-left">
+                                        <div class="pupil"></div>
+                                    </div>
+                                    <div class="eye eye-right">
+                                        <div class="pupil"></div>
+                                    </div>
+                                </div>
+                                <div class="mouth">
+                                    <div class="mouth-shape"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="avatar-body">
+                            <div class="shoulder shoulder-left"></div>
+                            <div class="shoulder shoulder-right"></div>
+                        </div>
+                    </div>
+                    <div class="avatar-status" id="avatarStatus">Ready</div>
+                </div>
+            </div>
+
+            <!-- Chat Section -->
+            <div class="chat-section">
+                <!-- Chat Interface -->
+                <div class="chat-interface" id="chatInterface">
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Messages will be appended here -->
+                    </div>
+
+                    <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <div class="voice-indicator" id="voiceIndicator" style="display: none;">
+                            <div class="voice-wave"></div>
+                            <div class="voice-wave"></div>
+                            <div class="voice-wave"></div>
+                            <span class="voice-text">Listening...</span>
+                        </div>
+                        
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="messageInput" 
+                                class="message-input" 
+                                placeholder="Type your message..."
+                                autocomplete="off"
+                            >
+                            <button class="btn-icon" id="micBtn" title="Voice input">
+                                <span class="mic-icon">🎤</span>
+                            </button>
+                            <button class="btn-icon btn-send" id="sendBtn" title="Send message">
+                                <span class="send-icon">📤</span>
+                            </button>
+                        </div>
+                        
+                        <div class="input-controls">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="voiceOutputToggle" checked>
+                                <span>Voice Output</span>
+                            </label>
+                            <button class="btn-text" id="clearChatBtn">Clear Chat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
